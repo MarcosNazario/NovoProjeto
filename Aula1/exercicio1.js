@@ -7,6 +7,8 @@ function botao(num) {
 function reset() {
 
 
+    
+
 }
 
 function calcula() {
