@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SetTimeOut</title>
+    <script>
+        var texto = "Curso JavaScript";
+        var velocidade = 150;
+        var controle = 1;
+        function flash() {
+
+            if(controle == 1) {
+                window.status = texto;
+                controle = 0;
+            } else {
+                window.status = "";
+                controle = 1;
+            }
+            setTimeout("flash();", velocidade);
+        }
+        flash();
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

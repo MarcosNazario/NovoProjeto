@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clique Para Calcular</title>
+    <script>
+
+        var res;
+
+        function soma() {
+            var n = parseInt(document.getElementById("val").value);
+            var n1 = parseInt(document.getElementById("val1").value);
+
+            res =  n + n1;
+            document.getElementById("total").value = res;
+
+        }
+
+        function subtrai() {
+            var n = document.getElementById("val").value;
+            var n1 = document.getElementById("val1").value;
+            res =  n - n1;
+            document.getElementById("total").value = res;
+        }
+
+        function multiplica() {
+            var n = document.getElementById("val").value;
+            var n1 = document.getElementById("val1").value;
+            res =  n * n1;
+            document.getElementById("total").value = res;
+        }
+        function divide() {
+            var n = document.getElementById("val").value;
+            var n1 = document.getElementById("val1").value;
+            res =  n / n1;
+            document.getElementById("total").value = res;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Clique para calcular</h1>
+    <p>Insira dois números e escolha o botão para efetuar o cálculo</p>
+    <input type="text" name="val" id="val" />
+    <input type="text" name="val1" id="val1" /><br /><br />
+    <input type="button" value="Somar" onclick="soma()" />
+    <input type="button" value="Subtrair" onclick="subtrai()" /><br/><br/>
+    <input type="button" value="Multiplica" onclick="multiplica()" />
+    <input type="button" value="Dividir" onclick="divide()" /><br/><br/>
+    <input type="text" name="total" id="total"><br/>
+    
+
+
+</body>
+
+</html>

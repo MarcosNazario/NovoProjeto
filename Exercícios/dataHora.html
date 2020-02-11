@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exibir data e hora</title>
+    <script type="text/javascript">
+        function relogio() {
+            var data = new Date();
+            var horas = data.getHours();
+            var minutos = data.getMinutes();
+            var segundos = data.getSeconds();
+            var dia = data.getDate();
+            var mes = data.getMonth();
+            var ano = data.getFullYear();
+            if (horas < 10) {
+                horas = "0" + horas;
+            }
+            if (minutos < 10) {
+                minutos = "0" + minutos;
+            }
+            if (segundos < 10) {
+                segundos = "0" + segundos;
+            }
+            if (dia < 10) {
+                dia = "0" + dia;
+            }
+            if (mes < 10) {
+                mes = 1 + mes;
+                mes = "0" + mes;
+            }
+            document.getElementById("relogio").innerHTML = dia + "/" + mes + "/" + ano + "<br/><br/>" + horas + ":" + minutos + ":" + segundos + "<br/><br/><br/><br/>";
+        }
+        window.setInterval("relogio()", 1000);
+    </script>
+    <style type="text/css">
+        #relogio {
+            color: #f90;
+            font: bold 70px Arial;
+            padding: 100px;
+            text-align: center;
+            background-color: #252323;
+        }
+
+        
+        
+    </style>
+</head>
+
+<body onload="relogio();">
+        <div id="relogio"></div>
+
+</body>
+
+</html>

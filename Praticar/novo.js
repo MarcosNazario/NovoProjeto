@@ -22,10 +22,10 @@ function init(){
     var oito = document.getElementById('oito');
     var nove = document.getElementById('nove');
     var zero = document.getElementById('zero');
-  }
+}
 
-  //Eventos de click
-  um.onclick = function(e){
+//Eventos de click
+um.onclick = function(e){
     resultado.textContent = resultado.textContent  + "1";
 }
 dois.onclick = function(e){
@@ -111,5 +111,6 @@ function limpar(){
     }
     resetar();
     resultado.textContent = res;
+    //
     
   }

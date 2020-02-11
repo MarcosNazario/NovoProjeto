@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contador</title>
+</head>
+<body>
+    <script>
+        var ponto = 0;
+        function Maisum() {
+            ponto = ponto + 1;
+            return ponto
+        }
+
+        document.getElementById("texto2").innerHTML = "ponto";
+
+    </script>
+    <pre>
+        <h1>Contador de Cliques</h1>
+        <p>id="texto2"</p>
+        <input type="text" id="texto" name="texto1">
+        <input type="button" value="Zerar" onclick="ponto = 0">
+        <input type="button" value="Adicionar" onclick="Maisum()">
+
+    </pre>
+    
+</body>
+</html>

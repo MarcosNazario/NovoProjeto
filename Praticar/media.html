@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOLETIM ESCOLAR</title>
+</head>
+
+<body>
+
+    <h1>BOLETIM ANUAL</h1>
+    <td colspan="6"><span id="media"></span></td>
+    <tr>
+        <td>Matéria</td>
+        <td>1. Bim</td>
+        <td>2. Bim</td>
+        <td>3. Bim</td>
+        <td>4. Bim</td>
+        <td>Faltas</td>
+    </tr>
+    <br /><br />
+
+
+    <tr>
+        <td><span>Portugues</span></td>
+        <td><input type="text" name="texto" id="texto"></td>
+        <td><input type="text" name="texto1" id="texto1"></td>
+        <td><input type="text" name="texto2" id="texto2"></td>
+        <td><input type="text" name="texto3" id="texto3"></td>
+        <td><input type="text" name="texto4" id="texto4"></td>
+    </tr>
+    <br /><br /><br />
+
+    <input type="button" value="Resultado" id="resultado" onclick="media()"><br /><br />
+    <input type="text" name="texto5" id="texto5">
+    <div id="res"></div>
+
+
+
+    <script>
+
+        var res;
+        var resul;
+
+
+
+        function media() {
+            var n1 = document.getElementById("texto").value;
+            var n2 = document.getElementById("texto1").value;
+            var n3 = document.getElementById("texto2").value;
+            var n4 = document.getElementById("texto3").value;
+            var f = document.getElementById("texto4").value;
+            var med;
+            med = (n1 + n2 + n3 + n4) / 4;
+            if (med >= 6 ) {
+                if (f <= 10){
+                    resul = "APROVADO"
+                }
+                else {
+                    resul = "REPROVADO"
+                }
+                
+            } else if (med >=4 && f <= 10) {
+                resul = "RECUPERAÇÃO"
+            } else {
+                resul = "REPROVADO"
+            }
+
+            document.getElementById("texto5").value = resul;
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
